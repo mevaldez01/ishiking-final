@@ -1,0 +1,173 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    background: #4CAF50;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.menu-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.menu-button .menu-circle {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #4CAF50;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1em;
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 0.5em 0;
+}
+
+.menu ul li a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    color: #333;
+}
+
+.hero {
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2em;
+    border-radius: 5px;
+}
+
+.hero-content h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.cta-button {
+    background: #FFA500;
+    color: #fff;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background: #FF4500;
+}
+
+.hand-drawn-line {
+    height: 2px;
+    background: url('images/hand-drawn-line.png') repeat-x;
+    margin: 2em 0;
+}
+
+main {
+    padding: 2em;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2em;
+    text-align: center;
+}
+
+.destinations-grid .destination img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 0.5em;
+}
+
+.destinations-grid .destination p {
+    font-size: 1.2em;
+}
+
+.about-content, .blog-content {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.about-content img, .blog-content img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+footer {
+    background: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
