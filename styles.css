@@ -7,6 +7,107 @@
 
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    margin: 0;
+}
+#menuButton {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+}
+#menu {
+    display: none;
+    background: #444;
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    border: 1px solid #333;
+}
+#menu.open {
+    display: block;
+}
+.menu-circle.spin {
+    animation: spin 0.5s linear;
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+main {
+    padding: 20px;
+}
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+.image-grid img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    cursor: pointer;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+}
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f9f9f9;
@@ -113,7 +214,7 @@ header h1 {
 
 .hand-drawn-line {
     height: 2px;
-    background: url('images/hand-drawn-line.png') repeat-x;
+    background: url('images/gallery/hand-drawn-line.png') repeat-x;
     margin: 2em 0;
 }
 
@@ -125,6 +226,13 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1em;
+}
+
+.image-grid a {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
 }
 
 .image-grid img {

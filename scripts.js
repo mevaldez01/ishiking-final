@@ -25,4 +25,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function openImageInModal(image) {
         const modal = document.createElement('div');
-        modal
+        modal.classList.add('modal');
+
+        const imgElement = document.createElement('img');
+        imgElement.src = `images/${image}`;
+
+        const closeModal = document.createElement('span');
+        closeModal.textContent = '×';
+        closeModal.classList.add('modal-close');
+        closeModal.addEventListener('click', () => {
+            document.body.removeChild(modal);
+        });
+
+        modal.appendChild(imgElement);
+        modal.appendChild(closeModal);
+        document.body.appendChild(modal);
+    }
+});
